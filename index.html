@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM Machine</title>
+<link rel="stylesheet" href="Atm style.css">
+</head>
+<body>
+
+  <div class="atm">
+    <h1>ATM Machine</h1>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen">
+      <p class="subtitle">Enter your 4-digit PIN</p>
+      <input type="password" id="pinInput" maxlength="4" placeholder="****">
+      <button onclick="checkPin()">Enter</button>
+      <p id="loginMessage" class="message"></p>
+      <p class="hint">Hint: PIN is 1234</p>
+    </div>
+
+    <!-- Main ATM Screen -->
+    <div id="mainScreen" class="screen hidden">
+      <p class="subtitle">Available Balance</p>
+      <h2 id="balanceDisplay">₹0</h2>
+
+      <div class="amount-box">
+        <input type="number" id="amountInput" placeholder="Enter amount">
+      </div>
+
+      <div class="buttons">
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+        <button onclick="checkBalance()">Check Balance</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+
+      <p id="atmMessage" class="message"></p>
+    </div>
+  </div>
+
+  <script src="Atm script.js"></script>
+</body>
+</html>
